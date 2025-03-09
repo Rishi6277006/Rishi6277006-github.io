@@ -1,4 +1,31 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Dark Mode Toggle
+    const darkModeToggleBtn = document.getElementById('dark-mode-toggle-btn');
+    const body = document.body;
+
+    // Check for saved theme in localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.setAttribute('data-theme', 'dark');
+        darkModeToggleBtn.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+    } else {
+        body.setAttribute('data-theme', 'light');
+        darkModeToggleBtn.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+    }
+
+    // Toggle Dark Mode
+    darkModeToggleBtn.addEventListener('click', () => {
+        if (body.getAttribute('data-theme') === 'dark') {
+            body.setAttribute('data-theme', 'light');
+            darkModeToggleBtn.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+            localStorage.setItem('theme', 'light');
+        } else {
+            body.setAttribute('data-theme', 'dark');
+            darkModeToggleBtn.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+
     // Set active navigation item based on current page
     const currentLocation = window.location.pathname;
     const navItems = document.querySelectorAll('.nav-item');

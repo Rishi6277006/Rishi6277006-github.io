@@ -10,6 +10,15 @@
     --animation-duration: 0.5s;
 }
 
+/* Dark Mode Overrides */
+[data-theme="dark"] {
+    --dark-color: #f1f5f9;
+    --light-color: #1e293b;
+    --text-color: #f1f5f9;
+    --white: #1e293b;
+    --shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: var(--dark-color);
+    color: var(--text-color);
 }
 
 a {
@@ -103,7 +112,7 @@ section.visible {
 
 .profile h1 {
     font-size: 1.5rem;
-    color: var(--white);
+    color: var(--light-color);
 }
 
 .profile p {
