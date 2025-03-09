@@ -7,6 +7,7 @@
     --white: #ffffff;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --sidebar-width: 280px;
+    --animation-duration: 0.3s;
 }
 
 * {
@@ -35,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
     text-decoration: none;
     color: var(--primary-color);
-    transition: all 0.3s ease;
+    transition: all var(--animation-duration) ease;
 }
 
 a:hover {
@@ -67,6 +68,7 @@ section {
     color: var(--light-color);
     overflow-y: auto;
     box-shadow: var(--shadow);
+    transition: all var(--animation-duration) ease;
 }
 
 .profile {
@@ -80,6 +82,12 @@ section {
     border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 1rem;
+    transition: all var(--animation-duration) ease;
+}
+
+.profile img:hover {
+    transform: scale(1.05);
+    border-color: var(--primary-color);
 }
 
 .profile h1 {
@@ -106,7 +114,7 @@ section {
     padding: 0.75rem 1rem;
     color: var(--light-color);
     border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: all var(--animation-duration) ease;
 }
 
 .nav-item a:hover, 
@@ -130,10 +138,12 @@ section {
     color: var(--light-color);
     font-size: 1.2rem;
     margin: 0 0.75rem;
+    transition: all var(--animation-duration) ease;
 }
 
 .social-links a:hover {
     color: var(--primary-color);
+    transform: translateY(-3px);
 }
 
 .main-content {
@@ -148,11 +158,13 @@ section {
     padding: 3rem;
     margin-bottom: 3rem;
     box-shadow: var(--shadow);
+    animation: fadeIn 1s ease;
 }
 
 .hero-content h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    animation: slideInLeft 0.8s ease;
 }
 
 .hero-content h1 span {
@@ -162,16 +174,19 @@ section {
 .hero-content h2 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+    animation: slideInRight 0.8s ease;
 }
 
 .hero-content p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
+    animation: fadeIn 1.2s ease;
 }
 
 .hero-buttons {
     display: flex;
     gap: 1rem;
+    animation: fadeIn 1.5s ease;
 }
 
 .btn {
@@ -181,7 +196,7 @@ section {
     font-weight: 500;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all var(--animation-duration) ease;
     border: none;
 }
 
@@ -192,6 +207,7 @@ section {
 
 .btn-primary:hover {
     background-color: var(--secondary-color);
+    transform: translateY(-3px);
 }
 
 .btn-secondary {
@@ -203,6 +219,7 @@ section {
 .btn-secondary:hover {
     background-color: var(--primary-color);
     color: var(--white);
+    transform: translateY(-3px);
 }
 
 .project-grid {
@@ -216,11 +233,11 @@ section {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: all var(--animation-duration) ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
@@ -233,11 +250,11 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: all 0.3s ease;
+    transition: all var(--animation-duration) ease;
 }
 
 .project-card:hover .project-image img {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .project-info {
@@ -287,6 +304,38 @@ footer {
     background-color: var(--white);
     color: var(--text-color);
     box-shadow: var(--shadow);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 /* Responsive Design */
