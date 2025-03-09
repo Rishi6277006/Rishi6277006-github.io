@@ -83,6 +83,7 @@
 
     <!-- Main Content -->
     <main class="main-content">
+        <!-- Home Section -->
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1>Hi, I'm <span>Rishikesh Thakker</span></h1>
@@ -95,29 +96,161 @@
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about">
             <h2>About Me</h2>
-            <p>Hello! I'm Rishikesh Thakker, a passionate Data Scientist and Machine Learning Engineer with expertise in building AI-driven solutions for real-world problems.</p>
+            <p>Hello! I'm Rishikesh Thakker, a passionate Data Scientist and Machine Learning Engineer with expertise in building AI-driven solutions for real-world problems. I'm currently pursuing my Master's in Applied Data Science at Syracuse University, where I'm enhancing my skills in machine learning, natural language processing, and cloud computing.</p>
+            <p>My journey in technology began with a Bachelor's degree in Electronics and Telecommunication, where I developed a strong foundation in mathematics and programming. This background has been invaluable in my transition to data science, providing me with a unique perspective on solving complex problems.</p>
+            <p>I specialize in developing machine learning models for predictive analytics and automation. I've worked on various projects, from vacancy prediction using Random Forest models to building NLP pipelines for analyzing political debates. I'm particularly interested in the intersection of machine learning and cloud computing, developing scalable solutions that can generate actionable insights from large datasets.</p>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects">
             <h2>Projects</h2>
-            <p>Check out some of my featured projects below.</p>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/projects/project1.jpg" alt="Vacant Property Prediction">
+                    </div>
+                    <div class="project-info">
+                        <h3>Vacant Property Prediction</h3>
+                        <p>Developed a predictive model using Random Forest and PySpark to identify vacant properties in Syracuse with 92% accuracy. The project involved data preprocessing, feature engineering, and model optimization.</p>
+                        <div class="project-tech">
+                            <span>Random Forest</span>
+                            <span>PySpark</span>
+                            <span>K-means Clustering</span>
+                            <span>Feature Engineering</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/projects/project2.jpg" alt="Podcast Streaming Service">
+                    </div>
+                    <div class="project-info">
+                        <h3>Podcast Streaming Service</h3>
+                        <p>Built a secure, subscription-based podcast streaming service using AWS (EC2, S3, RDS) and React. Implemented user authentication, payment integration, and scalable cloud architecture.</p>
+                        <div class="project-tech">
+                            <span>AWS</span>
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Cloud Architecture</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/projects/project3.jpg" alt="Presidential Debate Analysis">
+                    </div>
+                    <div class="project-info">
+                        <h3>Presidential Debate Analysis</h3>
+                        <p>Analyzed presidential debate transcripts using BERTopic for topic modeling and sentiment analysis. Visualized insights using Tableau and provided actionable recommendations.</p>
+                        <div class="project-tech">
+                            <span>NLP</span>
+                            <span>BERTopic</span>
+                            <span>Sentiment Analysis</span>
+                            <span>Tableau</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <i class="fab fa-github"></i>
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!-- Experience Section -->
         <section id="experience">
             <h2>Experience</h2>
-            <p>Here's a summary of my professional experience.</p>
+            <div class="experience-item">
+                <h3>Data Science Intern</h3>
+                <p class="date">June 2023 - Present</p>
+                <ul>
+                    <li>Developed machine learning models for predictive analytics using Python and PySpark.</li>
+                    <li>Implemented data pipelines for processing large datasets on AWS.</li>
+                    <li>Created interactive dashboards using Tableau for data visualization.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Machine Learning Engineer</h3>
+                <p class="date">January 2022 - May 2023</p>
+                <ul>
+                    <li>Built NLP models for sentiment analysis and topic modeling.</li>
+                    <li>Optimized model performance using hyperparameter tuning and feature engineering.</li>
+                    <li>Deployed models using Docker and Kubernetes.</li>
+                </ul>
+            </div>
         </section>
 
+        <!-- Education Section -->
         <section id="education">
             <h2>Education</h2>
-            <p>Details about my academic background.</p>
+            <div class="education-item">
+                <h3>Master of Science in Applied Data Science</h3>
+                <p class="date">Syracuse University | 2022 - 2024</p>
+                <p>Relevant Coursework: Machine Learning, Natural Language Processing, Cloud Computing, Big Data Analytics</p>
+            </div>
+            
+            <div class="education-item">
+                <h3>Bachelor of Engineering in Electronics and Telecommunication</h3>
+                <p class="date">University of Mumbai | 2018 - 2022</p>
+                <p>Relevant Coursework: Data Structures, Algorithms, Probability and Statistics, Signal Processing</p>
+            </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact">
             <h2>Contact</h2>
-            <p>Feel free to reach out to me!</p>
+            <p>Feel free to reach out to me for collaborations, job opportunities, or just a friendly chat!</p>
+            <div class="contact-info">
+                <div class="contact-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Syracuse, NY, USA</p>
+                </div>
+                
+                <div class="contact-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>thakker834@gmail.com</p>
+                </div>
+                
+                <div class="contact-info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+1 (315) 555-1234</p>
+                </div>
+            </div>
         </section>
     </main>
 
