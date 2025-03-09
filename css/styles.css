@@ -12,10 +12,12 @@
 
 /* Dark Mode Overrides */
 [data-theme="dark"] {
-    --dark-color: #0f172a; /* Darker background for dark mode */
-    --light-color: #1e293b; /* Lighter background for dark mode */
-    --text-color: #e2e8f0; /* Light text for dark mode */
-    --white: #1e293b; /* White background for dark mode */
+    --primary-color: #60a5fa;
+    --secondary-color: #3b82f6;
+    --dark-color: #0f172a;
+    --light-color: #1e293b;
+    --text-color: #e2e8f0;
+    --white: #1e293b;
     --shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
 }
 
