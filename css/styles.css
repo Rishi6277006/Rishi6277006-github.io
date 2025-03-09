@@ -12,10 +12,10 @@
 
 /* Dark Mode Overrides */
 [data-theme="dark"] {
-    --dark-color: #f1f5f9;
-    --light-color: #1e293b;
-    --text-color: #f1f5f9;
-    --white: #1e293b;
+    --dark-color: #0f172a; /* Darker background for dark mode */
+    --light-color: #1e293b; /* Lighter background for dark mode */
+    --text-color: #e2e8f0; /* Light text for dark mode */
+    --white: #1e293b; /* White background for dark mode */
     --shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
 }
 
@@ -462,6 +462,43 @@ section.visible {
 .scroll-to-top:hover {
     background-color: var(--secondary-color);
     transform: translateY(-5px);
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.dark-mode-toggle button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-mode-toggle button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+.dark-mode-toggle button i {
+    transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle button[data-theme="dark"] i {
+    transform: rotate(180deg);
 }
 
 /* Animations */
