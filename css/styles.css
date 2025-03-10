@@ -1,23 +1,21 @@
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #4338ca;
-    --dark-color: #1e293b;
-    --light-color: #f1f5f9;
-    --text-color: #334155;
-    --white: #ffffff;
+    --primary-color: #2563eb; /* Blue */
+    --secondary-color: #4338ca; /* Darker Blue */
+    --dark-color: #1e293b; /* Dark background */
+    --light-color: #f1f5f9; /* Light background */
+    --text-color: #334155; /* Dark text */
+    --white: #ffffff; /* White */
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --sidebar-width: 280px;
-    --animation-duration: 0.5s;
 }
 
 /* Dark Mode Overrides */
 [data-theme="dark"] {
-    --primary-color: #60a5fa;
-    --secondary-color: #3b82f6;
-    --dark-color: #0f172a;
-    --light-color: #1e293b;
-    --text-color: #e2e8f0;
-    --white: #1e293b;
+    --primary-color: #60a5fa; /* Lighter Blue for better contrast in dark mode */
+    --secondary-color: #3b82f6; /* Brighter Blue */
+    --dark-color: #0f172a; /* Very dark background */
+    --light-color: #1e293b; /* Darker background for cards and sections */
+    --text-color: #e2e8f0; /* Light text for dark mode */
+    --white: #1e293b; /* Dark background for white elements */
     --shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
 }
 
