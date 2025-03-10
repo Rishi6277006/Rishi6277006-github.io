@@ -20,6 +20,16 @@
     --shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
 }
 
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it stays behind other content */
+    background-color: var(--light-color); /* Match your background color */
+}
+
 * {
     margin: 0;
     padding: 0;
