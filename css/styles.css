@@ -20,39 +20,6 @@
     --shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
 }
 
-/* Particles Container */
-#particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Ensure it stays behind other content */
-    background-color: var(--light-color); /* Match your background color */
-}
-
-:root {
-    --primary-color: #2563eb; /* Blue */
-    --secondary-color: #4338ca; /* Darker Blue */
-    --dark-color: #1e293b; /* Dark background */
-    --light-color: #f1f5f9; /* Light background */
-    --text-color: #334155; /* Dark text */
-    --white: #ffffff; /* White */
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --sidebar-width: 280px; /* Sidebar width */
-}
-
-/* Dark Mode Overrides */
-[data-theme="dark"] {
-    --primary-color: #60a5fa; /* Lighter Blue for better contrast in dark mode */
-    --secondary-color: #3b82f6; /* Brighter Blue */
-    --dark-color: #0f172a; /* Very dark background */
-    --light-color: #1e293b; /* Darker background for cards and sections */
-    --text-color: #e2e8f0; /* Light text for dark mode */
-    --white: #1e293b; /* Dark background for white elements */
-    --shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -303,24 +270,13 @@ section.visible {
     transform: translateY(-3px);
 }
 
-/* Projects Section */
-#projects {
-    overflow: hidden;
-}
-
-.project-scroller {
-    overflow-x: auto;
-    padding-bottom: 1rem; /* Add space for scrollbar */
-}
-
 .project-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding-bottom: 1rem; /* Add space for scrollbar */
 }
 
 .project-card {
-    flex: 0 0 300px; /* Fixed width for each card */
     background-color: var(--white);
     border-radius: 10px;
     overflow: hidden;
