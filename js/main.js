@@ -101,34 +101,45 @@ document.addEventListener('DOMContentLoaded', function () {
 particlesJS.load('particles-js', 'particles.json', function() {
     console.log('Particles.js loaded!');
 });
-// Tech Stack Data
+
+// Tech Stack Data with Icons
 const techStack = [
-    { name: "Python", proficiency: 90 },
-    { name: "SQL", proficiency: 85 },
-    { name: "AWS", proficiency: 80 },
-    { name: "Tableau", proficiency: 75 },
-    { name: "JavaScript", proficiency: 70 },
-    { name: "TensorFlow", proficiency: 85 },
-    { name: "Git", proficiency: 90 },
-    { name: "Azure AI", proficiency: 75 },
-    { name: "PyTorch", proficiency: 80 },
-    { name: "Apache Spark", proficiency: 70 },
-    { name: "FastAPI", proficiency: 75 },
-    { name: "CrewAI", proficiency: 65 },
-    { name: "RAG", proficiency: 70 },
-    { name: "Kafka", proficiency: 65 },
-    { name: "PostgreSQL", proficiency: 80 }
+    { name: "Python", proficiency: 120, icon: "fab fa-python" },
+    { name: "SQL", proficiency: 110, icon: "fas fa-database" },
+    { name: "AWS", proficiency: 100, icon: "fab fa-aws" },
+    { name: "Tableau", proficiency: 90, icon: "fas fa-chart-bar" },
+    { name: "JavaScript", proficiency: 80, icon: "fab fa-js" },
+    { name: "TensorFlow", proficiency: 110, icon: "fab fa-tensorflow" },
+    { name: "Git", proficiency: 120, icon: "fab fa-git-alt" },
+    { name: "Azure AI", proficiency: 90, icon: "fas fa-cloud" },
+    { name: "PyTorch", proficiency: 100, icon: "fab fa-python" }, // Use Python icon as placeholder
+    { name: "Apache Spark", proficiency: 80, icon: "fas fa-bolt" }, // Use bolt icon as placeholder
+    { name: "FastAPI", proficiency: 90, icon: "fas fa-server" }, // Use server icon as placeholder
+    { name: "CrewAI", proficiency: 70, icon: "fas fa-robot" }, // Use robot icon as placeholder
+    { name: "RAG", proficiency: 80, icon: "fas fa-brain" }, // Use brain icon as placeholder
+    { name: "Kafka", proficiency: 70, icon: "fas fa-stream" }, // Use stream icon as placeholder
+    { name: "PostgreSQL", proficiency: 100, icon: "fas fa-database" } // Use database icon as placeholder
 ];
 
-// Generate Tech Stack Bubbles
+// Generate Tech Stack Bubbles with Icons
 const techStackContainer = document.querySelector('.tech-stack-visualization');
 if (techStackContainer) {
     techStack.forEach(tech => {
         const bubble = document.createElement('div');
         bubble.className = 'tech-bubble';
-        bubble.textContent = tech.name;
         bubble.style.width = `${tech.proficiency}px`;
         bubble.style.height = `${tech.proficiency}px`;
+
+        // Add icon
+        const icon = document.createElement('i');
+        icon.className = tech.icon;
+        bubble.appendChild(icon);
+
+        // Add technology name
+        const name = document.createElement('span');
+        name.textContent = tech.name;
+        bubble.appendChild(name);
+
         techStackContainer.appendChild(bubble);
     });
 }
