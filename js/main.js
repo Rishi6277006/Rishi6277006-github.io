@@ -116,8 +116,8 @@ const techStack = [
 ];
 
 // Generate Tech Stack Items
-const techStackInner = document.querySelector('.tech-stack-inner');
-if (techStackInner) {
+const techCarouselInner = document.querySelector('.tech-carousel-inner');
+if (techCarouselInner) {
     techStack.forEach((tech, index) => {
         const techItem = document.createElement('div');
         techItem.className = 'tech-item';
@@ -132,6 +132,6 @@ if (techStackInner) {
         name.textContent = tech.name;
         techItem.appendChild(name);
 
-        techStackInner.appendChild(techItem);
+        techCarouselInner.appendChild(techItem);
     });
 }

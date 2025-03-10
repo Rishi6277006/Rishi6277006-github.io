@@ -674,28 +674,29 @@ section.visible {
     }
 }
 
-/* 3D Tech Stack Visualization Styles */
-.tech-stack-3d {
+/* 3D Carousel Tech Stack Visualization Styles */
+.tech-carousel {
     perspective: 1000px; /* Adds depth for 3D effect */
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
     padding: 2rem;
+    position: relative;
 }
 
-.tech-stack-inner {
+.tech-carousel-inner {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     transform-style: preserve-3d; /* Enables 3D transformations */
-    animation: rotate-3d 20s infinite linear; /* Rotates the cube */
+    animation: rotate-carousel 20s infinite linear; /* Rotates the carousel */
 }
 
 .tech-item {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white);
     border-radius: 10px;
@@ -721,16 +722,18 @@ section.visible {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Position each tech item on the cube faces */
-.tech-item:nth-child(1) { transform: rotateY(0deg) translateZ(100px); } /* Front */
-.tech-item:nth-child(2) { transform: rotateY(90deg) translateZ(100px); } /* Right */
-.tech-item:nth-child(3) { transform: rotateY(180deg) translateZ(100px); } /* Back */
-.tech-item:nth-child(4) { transform: rotateY(-90deg) translateZ(100px); } /* Left */
-.tech-item:nth-child(5) { transform: rotateX(90deg) translateZ(100px); } /* Top */
-.tech-item:nth-child(6) { transform: rotateX(-90deg) translateZ(100px); } /* Bottom */
+/* Position each tech item in a circular carousel */
+.tech-item:nth-child(1) { transform: rotateY(0deg) translateZ(200px); }
+.tech-item:nth-child(2) { transform: rotateY(45deg) translateZ(200px); }
+.tech-item:nth-child(3) { transform: rotateY(90deg) translateZ(200px); }
+.tech-item:nth-child(4) { transform: rotateY(135deg) translateZ(200px); }
+.tech-item:nth-child(5) { transform: rotateY(180deg) translateZ(200px); }
+.tech-item:nth-child(6) { transform: rotateY(225deg) translateZ(200px); }
+.tech-item:nth-child(7) { transform: rotateY(270deg) translateZ(200px); }
+.tech-item:nth-child(8) { transform: rotateY(315deg) translateZ(200px); }
 
-/* 3D Rotation Animation */
-@keyframes rotate-3d {
+/* 3D Carousel Rotation Animation */
+@keyframes rotate-carousel {
     0% {
         transform: rotateY(0deg);
     }
@@ -741,14 +744,14 @@ section.visible {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .tech-stack-inner {
-        width: 150px;
-        height: 150px;
+    .tech-carousel-inner {
+        width: 250px;
+        height: 250px;
     }
 
     .tech-item {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
         font-size: 1rem;
     }
 
@@ -756,23 +759,25 @@ section.visible {
         font-size: 1.5rem;
     }
 
-    .tech-item:nth-child(1) { transform: rotateY(0deg) translateZ(75px); }
-    .tech-item:nth-child(2) { transform: rotateY(90deg) translateZ(75px); }
-    .tech-item:nth-child(3) { transform: rotateY(180deg) translateZ(75px); }
-    .tech-item:nth-child(4) { transform: rotateY(-90deg) translateZ(75px); }
-    .tech-item:nth-child(5) { transform: rotateX(90deg) translateZ(75px); }
-    .tech-item:nth-child(6) { transform: rotateX(-90deg) translateZ(75px); }
+    .tech-item:nth-child(1) { transform: rotateY(0deg) translateZ(150px); }
+    .tech-item:nth-child(2) { transform: rotateY(45deg) translateZ(150px); }
+    .tech-item:nth-child(3) { transform: rotateY(90deg) translateZ(150px); }
+    .tech-item:nth-child(4) { transform: rotateY(135deg) translateZ(150px); }
+    .tech-item:nth-child(5) { transform: rotateY(180deg) translateZ(150px); }
+    .tech-item:nth-child(6) { transform: rotateY(225deg) translateZ(150px); }
+    .tech-item:nth-child(7) { transform: rotateY(270deg) translateZ(150px); }
+    .tech-item:nth-child(8) { transform: rotateY(315deg) translateZ(150px); }
 }
 
 @media (max-width: 576px) {
-    .tech-stack-inner {
-        width: 120px;
-        height: 120px;
+    .tech-carousel-inner {
+        width: 200px;
+        height: 200px;
     }
 
     .tech-item {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         font-size: 0.9rem;
     }
 
@@ -780,10 +785,12 @@ section.visible {
         font-size: 1.2rem;
     }
 
-    .tech-item:nth-child(1) { transform: rotateY(0deg) translateZ(60px); }
-    .tech-item:nth-child(2) { transform: rotateY(90deg) translateZ(60px); }
-    .tech-item:nth-child(3) { transform: rotateY(180deg) translateZ(60px); }
-    .tech-item:nth-child(4) { transform: rotateY(-90deg) translateZ(60px); }
-    .tech-item:nth-child(5) { transform: rotateX(90deg) translateZ(60px); }
-    .tech-item:nth-child(6) { transform: rotateX(-90deg) translateZ(60px); }
+    .tech-item:nth-child(1) { transform: rotateY(0deg) translateZ(120px); }
+    .tech-item:nth-child(2) { transform: rotateY(45deg) translateZ(120px); }
+    .tech-item:nth-child(3) { transform: rotateY(90deg) translateZ(120px); }
+    .tech-item:nth-child(4) { transform: rotateY(135deg) translateZ(120px); }
+    .tech-item:nth-child(5) { transform: rotateY(180deg) translateZ(120px); }
+    .tech-item:nth-child(6) { transform: rotateY(225deg) translateZ(120px); }
+    .tech-item:nth-child(7) { transform: rotateY(270deg) translateZ(120px); }
+    .tech-item:nth-child(8) { transform: rotateY(315deg) translateZ(120px); }
 }
