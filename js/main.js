@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Scroll-triggered animations for sections
+    // Scroll-triggered animations for sections and project cards
     const sections = document.querySelectorAll('section');
     const projectCards = document.querySelectorAll('.project-card');
 

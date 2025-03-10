@@ -270,13 +270,24 @@ section.visible {
     transform: translateY(-3px);
 }
 
+/* Projects Section */
+#projects {
+    overflow: hidden;
+}
+
+.project-scroller {
+    overflow-x: auto;
+    padding-bottom: 1rem; /* Add space for scrollbar */
+}
+
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
     gap: 2rem;
+    padding-bottom: 1rem; /* Add space for scrollbar */
 }
 
 .project-card {
+    flex: 0 0 300px; /* Fixed width for each card */
     background-color: var(--white);
     border-radius: 10px;
     overflow: hidden;
