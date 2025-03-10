@@ -7,21 +7,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.setAttribute('data-theme', 'dark');
-        darkModeToggleBtn.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+        darkModeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
     } else {
         body.setAttribute('data-theme', 'light');
-        darkModeToggleBtn.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+        darkModeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
     }
 
     // Toggle Dark Mode
     darkModeToggleBtn.addEventListener('click', () => {
         if (body.getAttribute('data-theme') === 'dark') {
             body.setAttribute('data-theme', 'light');
-            darkModeToggleBtn.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+            darkModeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
             localStorage.setItem('theme', 'light');
         } else {
             body.setAttribute('data-theme', 'dark');
-            darkModeToggleBtn.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+            darkModeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
             localStorage.setItem('theme', 'dark');
         }
     });
