@@ -116,8 +116,8 @@ const techStack = [
 ];
 
 // Generate Tech Stack Items
-const techRadialContainer = document.querySelector('.tech-radial');
-if (techRadialContainer) {
+const techStackInner = document.querySelector('.tech-stack-inner');
+if (techStackInner) {
     techStack.forEach((tech, index) => {
         const techItem = document.createElement('div');
         techItem.className = 'tech-item';
@@ -132,6 +132,6 @@ if (techRadialContainer) {
         name.textContent = tech.name;
         techItem.appendChild(name);
 
-        techRadialContainer.appendChild(techItem);
+        techStackInner.appendChild(techItem);
     });
 }
