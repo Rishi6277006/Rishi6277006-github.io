@@ -118,6 +118,9 @@ const techStack = [
 // Generate Tech Stack Items
 const techCarouselInner = document.querySelector('.tech-carousel-inner');
 if (techCarouselInner) {
+    const totalItems = techStack.length;
+    const angleIncrement = 360 / totalItems; // Calculate angle between items
+
     techStack.forEach((tech, index) => {
         const techItem = document.createElement('div');
         techItem.className = 'tech-item';
@@ -131,6 +134,10 @@ if (techCarouselInner) {
         const name = document.createElement('span');
         name.textContent = tech.name;
         techItem.appendChild(name);
+
+        // Position each item in a circle
+        const angle = angleIncrement * index;
+        techItem.style.transform = `rotateY(${angle}deg) translateZ(200px)`;
 
         techCarouselInner.appendChild(techItem);
     });
