@@ -101,3 +101,34 @@ document.addEventListener('DOMContentLoaded', function () {
 particlesJS.load('particles-js', 'particles.json', function() {
     console.log('Particles.js loaded!');
 });
+// Tech Stack Data
+const techStack = [
+    { name: "Python", proficiency: 90 },
+    { name: "SQL", proficiency: 85 },
+    { name: "AWS", proficiency: 80 },
+    { name: "Tableau", proficiency: 75 },
+    { name: "JavaScript", proficiency: 70 },
+    { name: "TensorFlow", proficiency: 85 },
+    { name: "Git", proficiency: 90 },
+    { name: "Azure AI", proficiency: 75 },
+    { name: "PyTorch", proficiency: 80 },
+    { name: "Apache Spark", proficiency: 70 },
+    { name: "FastAPI", proficiency: 75 },
+    { name: "CrewAI", proficiency: 65 },
+    { name: "RAG", proficiency: 70 },
+    { name: "Kafka", proficiency: 65 },
+    { name: "PostgreSQL", proficiency: 80 }
+];
+
+// Generate Tech Stack Bubbles
+const techStackContainer = document.querySelector('.tech-stack-visualization');
+if (techStackContainer) {
+    techStack.forEach(tech => {
+        const bubble = document.createElement('div');
+        bubble.className = 'tech-bubble';
+        bubble.textContent = tech.name;
+        bubble.style.width = `${tech.proficiency}px`;
+        bubble.style.height = `${tech.proficiency}px`;
+        techStackContainer.appendChild(bubble);
+    });
+}
