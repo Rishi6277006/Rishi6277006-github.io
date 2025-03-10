@@ -673,17 +673,34 @@ section.visible {
         flex-direction: column;
     }
 }
-.tech-stack-visualization {
+
+/* Radial Tech Stack Visualization Styles */
+.tech-radial-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
+    align-items: center;
     margin-top: 2rem;
     padding: 1rem;
     position: relative;
 }
 
-.tech-bubble {
+.tech-radial {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
+}
+
+.tech-radial:hover {
+    animation-play-state: paused;
+}
+
+.tech-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -691,58 +708,77 @@ section.visible {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--white);
     border-radius: 50%;
+    width: 80px;
+    height: 80px;
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: var(--shadow);
     cursor: pointer;
-    position: relative;
-    animation: float 4s ease-in-out infinite;
-    padding: 1rem;
 }
 
-.tech-bubble:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.tech-bubble i {
-    font-size: 2rem;
+.tech-item i {
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-/* Floating Animation */
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
+.tech-item:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Radial Animation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
     }
-    50% {
-        transform: translateY(-10px);
+    100% {
+        transform: rotate(360deg);
     }
 }
 
+/* Position each tech item in a circle */
+.tech-item:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg); }
+.tech-item:nth-child(2) { transform: translate(-50%, -50%) rotate(45deg) translateX(150px) rotate(-45deg); }
+.tech-item:nth-child(3) { transform: translate(-50%, -50%) rotate(90deg) translateX(150px) rotate(-90deg); }
+.tech-item:nth-child(4) { transform: translate(-50%, -50%) rotate(135deg) translateX(150px) rotate(-135deg); }
+.tech-item:nth-child(5) { transform: translate(-50%, -50%) rotate(180deg) translateX(150px) rotate(-180deg); }
+.tech-item:nth-child(6) { transform: translate(-50%, -50%) rotate(225deg) translateX(150px) rotate(-225deg); }
+.tech-item:nth-child(7) { transform: translate(-50%, -50%) rotate(270deg) translateX(150px) rotate(-270deg); }
+.tech-item:nth-child(8) { transform: translate(-50%, -50%) rotate(315deg) translateX(150px) rotate(-315deg); }
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    .tech-bubble {
-        width: 100px !important;
-        height: 100px !important;
+    .tech-radial {
+        width: 250px;
+        height: 250px;
+    }
+
+    .tech-item {
+        width: 70px;
+        height: 70px;
         font-size: 0.9rem;
     }
 
-    .tech-bubble i {
-        font-size: 1.5rem;
+    .tech-item i {
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 576px) {
-    .tech-bubble {
-        width: 90px !important;
-        height: 90px !important;
+    .tech-radial {
+        width: 200px;
+        height: 200px;
+    }
+
+    .tech-item {
+        width: 60px;
+        height: 60px;
         font-size: 0.8rem;
     }
 
-    .tech-bubble i {
-        font-size: 1.2rem;
+    .tech-item i {
+        font-size: 1rem;
     }
 }
