@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Scroll-triggered animations for sections
     const sections = document.querySelectorAll('section');
+    const projectCards = document.querySelectorAll('.project-card');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -54,6 +55,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     sections.forEach(section => {
         observer.observe(section);
+    });
+
+    projectCards.forEach(card => {
+        observer.observe(card);
     });
 
     // Smooth scrolling for anchor links
