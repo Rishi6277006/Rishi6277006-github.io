@@ -7,21 +7,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.setAttribute('data-theme', 'dark');
-        darkModeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+        darkModeToggleBtn.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
     } else {
         body.setAttribute('data-theme', 'light');
-        darkModeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+        darkModeToggleBtn.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
     }
 
     // Toggle Dark Mode
     darkModeToggleBtn.addEventListener('click', () => {
         if (body.getAttribute('data-theme') === 'dark') {
             body.setAttribute('data-theme', 'light');
-            darkModeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+            darkModeToggleBtn.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
             localStorage.setItem('theme', 'light');
         } else {
             body.setAttribute('data-theme', 'dark');
-            darkModeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+            darkModeToggleBtn.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
             localStorage.setItem('theme', 'dark');
         }
     });
@@ -92,29 +92,4 @@ document.addEventListener('DOMContentLoaded', function () {
             scrollToTopButton.style.display = 'none';
         }
     });
-
-    // Scroll Progress Bar
-    const scrollProgress = document.querySelector('.scroll-progress');
-    window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        const height = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = (scrollY / height) * 100;
-        scrollProgress.style.width = `${progress}%`;
-    });
-
-    // Typewriter Effect for Hero Section
-    const typewriterText = document.querySelector('.typewriter');
-    const text = typewriterText.textContent;
-    typewriterText.textContent = '';
-    let index = 0;
-
-    function typeWriter() {
-        if (index < text.length) {
-            typewriterText.textContent += text.charAt(index);
-            index++;
-            setTimeout(typeWriter, 100); // Adjust typing speed here
-        }
-    }
-
-    typeWriter();
 });
