@@ -756,19 +756,3 @@ section.visible {
         font-size: 0.9rem;
     }
 }
-/* Globe Section Styles */
-#globe-section {
-    text-align: center;
-    margin: 4rem 0;
-    padding: 2rem;
-    background-color: var(--white);
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-}
-
-#globe-container {
-    width: 100%;
-    height: 500px; /* Adjust height as needed */
-    position: relative;
-    margin: 0 auto;
-}
